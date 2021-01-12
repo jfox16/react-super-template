@@ -1,0 +1,32 @@
+import React from 'react';
+{{#if stylesheet}}
+import { useStyles } from './styles';
+{{/if}}
+{{#if props}}
+
+interface {{name}}Props {
+
+}
+{{/if}}
+
+{{#if props}}
+const {{name}} = ({}: {{name}}Props) => {
+{{else}}
+const {{name}} = () => {
+{{/if}}
+  {{#if stylesheet}}
+  const classes = useStyles();
+
+  {{/if}}
+  return (
+    {{#if stylesheet}}
+    <div className={classes.root}>
+    {{else}}
+    <div>
+    {{/if}}
+      This is {{name}}
+    </div>
+  );
+}
+
+export default {{name}};
