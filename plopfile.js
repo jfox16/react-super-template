@@ -50,7 +50,7 @@ module.exports = function (plop) {
     }, {
       type: 'input',
       name: 'path',
-      message: 'Path for the page:'
+      message: 'URL path for the page:'
     }, {
       type: 'confirm',
       name: 'stylesheet',
